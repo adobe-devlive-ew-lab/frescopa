@@ -397,6 +397,9 @@ async function loadLazy(doc) {
       addSidekickListeners(document.querySelector('aem-sidekick'));
     }, { once: true });
   }
+
+  // register custom Experience Governance preflight checks (window.aem.preflight)
+  import('./preflight.js').then((mod) => mod.default());
 }
 
 /**

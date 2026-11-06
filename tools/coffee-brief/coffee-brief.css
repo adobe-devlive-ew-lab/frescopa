@@ -1,0 +1,33 @@
+:root { --accent:#6b3e26; --accent-soft:#f3e9e2; --line:#e1e1e1; --text:#222; --muted:#6e6e6e; }
+* { box-sizing: border-box; }
+body { margin:0; font:14px/1.4 adobe-clean, system-ui, sans-serif; color:var(--text); background:#fff; }
+.cb { padding:16px; display:flex; flex-direction:column; gap:12px; }
+h1 { font-size:18px; margin:0; }
+button { font:inherit; cursor:pointer; }
+
+.cb-tray { border:1px solid var(--line); border-radius:8px; padding:10px; }
+.cb-tray-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; color:var(--muted); }
+.cb-link { background:none; border:0; color:var(--accent); padding:0; text-decoration:underline; }
+.cb-picks { display:flex; flex-wrap:wrap; gap:6px; min-height:28px; }
+.cb-empty { color:var(--muted); font-style:italic; }
+.cb-chip { display:inline-flex; gap:6px; align-items:center; background:var(--accent); color:#fff; border:0; border-radius:14px; padding:4px 10px; }
+.cb-x { opacity:.8; }
+
+.cb-cats { display:flex; flex-direction:column; border-top:1px solid var(--line); }
+.cb-cat { border-bottom:1px solid var(--line); }
+.cb-cat-head { width:100%; display:flex; align-items:center; gap:8px; background:none; border:0; padding:10px 2px; text-align:left; }
+.cb-cat-head > span:first-child { flex:1; font-weight:600; }
+.cb-badge { background:var(--accent); color:#fff; border-radius:10px; min-width:20px; padding:0 6px; text-align:center; font-size:12px; }
+.cb-chev { color:var(--muted); width:12px; text-align:center; }
+.cb-pills { display:flex; flex-wrap:wrap; gap:6px; padding:0 2px 12px; }
+.cb-pill { border:1px solid var(--line); background:#fff; border-radius:14px; padding:4px 10px; }
+.cb-pill.on { background:var(--accent-soft); border-color:var(--accent); color:var(--accent); font-weight:600; }
+
+.cb-label { font-weight:600; }
+textarea { width:100%; border:1px solid var(--line); border-radius:8px; padding:8px; font:inherit; resize:vertical; }
+.cb-actions { display:flex; justify-content:flex-end; }
+.cb-primary { background:var(--accent); color:#fff; border:0; border-radius:16px; padding:6px 18px; font-weight:600; }
+.cb-primary:disabled { opacity:.4; cursor:not-allowed; }
+.cb-status { margin:0; min-height:1.4em; }
+.cb-status.ok { color:#2d7d46; }
+.cb-status.err { color:#c9252d; }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coffee Brief</title>
+  <link rel="stylesheet" href="./coffee-brief.css">
+  <script type="module" src="./coffee-brief.js"></script>
+</head>
+<body>
+  <main class="cb">
+    <h1>Coffee Brief</h1>
+
+    <section class="cb-tray" aria-live="polite">
+      <div class="cb-tray-head">
+        <span>Your mix · <strong id="cb-count">0</strong> selected</span>
+        <button type="button" id="cb-surprise" class="cb-link"><span aria-hidden="true">🎲</span> Surprise me</button>
+      </div>
+      <div id="cb-picks" class="cb-picks"><span class="cb-empty">Pick keywords below</span></div>
+    </section>
+
+    <section id="cb-cats" class="cb-cats"></section>
+
+    <label for="cb-brief" class="cb-label">Content brief</label>
+    <textarea id="cb-brief" rows="4" placeholder="What should this post be about? Audience, tone, angle…"></textarea>
+
+    <div class="cb-actions">
+      <button type="button" id="cb-generate" class="cb-primary" disabled>Generate</button>
+    </div>
+    <p id="cb-status" class="cb-status" role="status"></p>
+    <label id="cb-prompt-label" for="cb-prompt" class="cb-label" hidden>Prompt to copy</label>
+    <textarea id="cb-prompt" rows="8" readonly hidden></textarea>
+  </main>
+</body>
+</html>
